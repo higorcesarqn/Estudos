@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.Commands\Core.Commands.csproj" />
+    <ProjectReference Include="..\Core\Core.Events.Abstractions\Core.Events.Abstractions.csproj" />
+    <ProjectReference Include="..\Core\Core.Models.Extensions.CustomValidators\Core.Models.Extensions.CustomValidators.csproj" />
+    <ProjectReference Include="..\Hcqn.Domain\Hcqn.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\PessoaCommands\PessoaFisicaCommands\Update\" />
+  </ItemGroup>
+</Project>

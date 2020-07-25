@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Hcqn.Core.Bus.Abstractions</AssemblyName>
+    <RootNamespace>Hcqn.Core.Bus.Abstractions</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Commands\Core.Commands.csproj" />
+  </ItemGroup>
+</Project>

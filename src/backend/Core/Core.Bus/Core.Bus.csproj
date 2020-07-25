@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Hcqn.Core.Bus</AssemblyName>
+    <RootNamespace>Hcqn.Core.Bus</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.2" />
+    <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Bus.Abstractions\Core.Bus.Abstractions.csproj" />
+    <ProjectReference Include="..\Core.Commands\Core.Commands.csproj" />
+  </ItemGroup>
+
+</Project>

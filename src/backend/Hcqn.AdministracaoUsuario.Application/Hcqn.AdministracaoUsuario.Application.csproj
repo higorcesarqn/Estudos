@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.Commands\Core.Commands.csproj" />
+    <ProjectReference Include="..\Core\Core.UnitOfWork\Core.UnitOfWork.csproj" />
+    <ProjectReference Include="..\Hcqn.Domain\Hcqn.Domain.csproj" />
+    <ProjectReference Include="..\Hcqn.Infra.CrossCutting.Identity\Hcqn.Infra.CrossCutting.Identity.csproj" />
+  </ItemGroup>
+</Project>

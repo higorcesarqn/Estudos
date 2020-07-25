@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Hcqn.Core.Notifications.Abstractions</AssemblyName>
+    <RootNamespace>Hcqn.Core.Notifications.Abstractions</RootNamespace>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Events.Abstractions\Core.Events.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

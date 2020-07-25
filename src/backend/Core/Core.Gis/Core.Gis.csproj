@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description>Geographic information system</Description>
+    <AssemblyName>Hcqn.Core.Gis</AssemblyName>
+    <RootNamespace>Hcqn.Core.Gis</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SRID.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SRID.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NetTopologySuite.Core" Version="1.15.3" />
+    <PackageReference Include="ProjNET4GeoAPI" Version="1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Models\Core.Models.csproj" />
+  </ItemGroup>
+
+
+</Project>

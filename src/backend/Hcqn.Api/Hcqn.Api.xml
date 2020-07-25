@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Hcqn.Api.Configuration.Test.StartupTest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Configuration.Test.StartupTest.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:Hcqn.Api.Configuration.Test.StartupTest.RegisterDbContexts(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Hcqn.Api.Controllers.ApiController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.#ctor(Hcqn.Core.Notifications.Abstractions.INotifications)">
+            <summary>
+            
+            </summary>
+            <param name="notifications"></param>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.IsValidOperation">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.ResponseBadRequest">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.Response(Hcqn.Core.Tango.Types.Option{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.Response(NetTopologySuite.Features.FeatureCollection)">
+            <summary>
+            
+            </summary>
+            <param name="featureCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.ResponseCreated(System.String,Hcqn.Core.Tango.Types.Option{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="uri"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.Response``1(Hcqn.Core.UnitOfWork.Abstractions.IPagedList{``0})">
+            <summary>
+            
+            </summary>
+            <param name="pagedList"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.ApiController.Response``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.Controllers.HomeController">
+            <summary>
+            redireciona para a pagina inicial do swagger ao iniciar a api.
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.Helpers.ConfigureSwaggerGenOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Helpers.ConfigureSwaggerGenOptions.#ctor(Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Hcqn.Api.Helpers.ConfigureSwaggerGenOptions"/> class.
+            </summary>
+            <param name="provider">The <see cref="T:Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider">provider</see> used to generate Swagger documents.</param>
+        </member>
+        <member name="M:Hcqn.Api.Helpers.ConfigureSwaggerGenOptions.Configure(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:Hcqn.Api.Helpers.DbMigrationHelpers.DbMigration.EnsureSeedData``1(System.IServiceProvider)">
+                     * dotnet ef migrations add InitialCreate --context SitPostgreSQLContext --output Data/Migrations/SitDb
+                        dotnet ef migrations script --context SitPostgreSQLContext
+                     *
+                     *
+                    Add-Migration SitDbInit -context SitPostgreSQLContext -output Data/Migrations/SitDb
+                    Add-Migration EventSourcingDbInit -context EventStoreEventSourcingContext -output Data/Migrations/EventSourcingDb
+                    *
+        </member>
+        <member name="T:Hcqn.Api.Helpers.FluentValidationHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Helpers.FluentValidationHelper.AddFluentValidation(Microsoft.Extensions.DependencyInjection.IMvcBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="mvcBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.Helpers.SwaggerDefaultValues">
+             <summary>
+             Representa o filtro de operação Swagger / Swashbuckle usado para documentar o parâmetro implícito da versão da API.
+             </summary>
+            <remarks> Isso <see cref = "T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter" /> é necessário apenas devido a erros no <see cref = "T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator" />.
+             Depois de corrigidas e publicadas, essa classe pode ser removida. </remarks>
+        </member>
+        <member name="M:Hcqn.Api.Helpers.SwaggerDefaultValues.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Aplica o filtro à operação especificada usando o contexto fornecido.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="T:Hcqn.Api.Infrastructure.ActionResults.InternalServerErrorObjectResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Infrastructure.ActionResults.InternalServerErrorObjectResult.#ctor(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="T:Hcqn.Api.Infrastructure.Filters.HttpGlobalExceptionFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Infrastructure.Filters.HttpGlobalExceptionFilter.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILogger{Hcqn.Api.Infrastructure.Filters.HttpGlobalExceptionFilter})">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Hcqn.Api.Infrastructure.Filters.HttpGlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Hcqn.Api.Infrastructure.Filters.JsonErrorResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Infrastructure.Filters.JsonErrorResponse.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.Infrastructure.Filters.JsonErrorResponse.Messages">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.Infrastructure.Filters.JsonErrorResponse.DeveloperMeesage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.Infrastructure.Filters.ValidateModelStateFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.Infrastructure.Filters.ValidateModelStateFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Hcqn.Api.Program">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Hcqn.Api.Program.Configuration">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Hcqn.Api.Program.Main(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.Program.CreateHostBuilder(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.Startup.Configuration">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Hcqn.Api.Startup.#ctor(Microsoft.Extensions.Hosting.IHostEnvironment)">
+             <summary>
+            
+             </summary>
+             <param name="env"></param>
+        </member>
+        <member name="M:Hcqn.Api.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="container"></param>
+        </member>
+        <member name="M:Hcqn.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+             <summary>
+            
+             </summary>
+             <param name="services"></param>
+             <returns></returns>
+        </member>
+        <member name="P:Hcqn.Api.Startup.AutofacContainer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Hcqn.Api.Startup.RegisterDbContexts(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+             <summary>
+            
+             </summary>
+             <param name="services"></param>
+        </member>
+        <member name="M:Hcqn.Api.Startup.UseAuthentication(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="app"></param>
+        </member>
+        <member name="M:Hcqn.Api.Startup.AddAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+             <summary>
+            
+             </summary>
+             <param name="services"></param>
+        </member>
+        <member name="M:Hcqn.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="provider"></param>
+        </member>
+        <member name="T:Hcqn.Api.V1.Autenticacao.AutenticacaoController">
+            <summary>
+            Controller de Autenticação
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Autenticacao.AutenticacaoController.#ctor(Hcqn.Core.Notifications.Abstractions.INotifications)">
+            <summary>
+            
+            </summary>
+            <param name="notifications"></param>
+        </member>
+        <member name="M:Hcqn.Api.V1.Autenticacao.AutenticacaoController.Autenticacao(Hcqn.Infra.CrossCutting.Jwt.IJwtAutenticationService,Hcqn.Api.V1.Autenticacao.Models.AutenticacaoModel)">
+            <summary>
+            Autentica o usuário. [AllowAnonymous]
+            </summary>
+            <param name="jwtAutenticationService"></param>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.V1.Autenticacao.Models.LoginModelValidation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.V1.Grupos.GruposController">
+            <summary>
+            Controller de Grupos
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Grupos.GruposController.#ctor(Hcqn.Core.Notifications.Abstractions.INotifications)">
+            <summary>
+            
+            </summary>
+            <param name="notifications"></param>
+        </member>
+        <member name="M:Hcqn.Api.V1.Grupos.GruposController.Get(Hcqn.Domain.AggregatesModel.RoleAggregate.IRoleRepository,System.Int32,System.Int32)">
+            <summary>
+            Lista os Grupos. Roles [grupos-detalhar,grupos-editar]
+            </summary>
+            <param name="roleRepository"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Grupos.GruposController.Get(Hcqn.Domain.AggregatesModel.RoleAggregate.IRoleRepository,System.Guid)">
+            <summary>
+            Detalha um grupo
+            </summary>
+            <param name="roleRepository"></param>
+            <param name="idGrupo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Grupos.GruposController.Post(Hcqn.Core.Bus.Abstractions.IMediatorHandler,Hcqn.Api.V1.Grupos.Models.NovoGrupoModel)">
+            <summary>
+            Adiciona um novo grupo.
+            Roles: [grupos-adicionar]
+            </summary>
+            <param name="bus"></param>
+            <param name="novoGrupoModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Grupos.GruposController.Put(Hcqn.Core.Bus.Abstractions.IMediatorHandler,System.Guid,Hcqn.Api.V1.Grupos.Models.EditarGrupoModel)">
+            <summary>
+            Edita um Grupo.
+            Roles: [grupos-editar]
+            </summary>
+            <param name="bus"></param>
+            <param name="idGrupo"></param>
+            <param name="editarGrupoModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Grupos.GruposController.GetPermissoes(Hcqn.Domain.AggregatesModel.RoleAggregate.IRoleRepository)">
+            <summary>
+            Lista as permissões.
+            Roles: [grupos-adicionar, grupos-editar]
+            </summary>
+            <param name="permissionRepository"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.V1.Grupos.Models.DetalhesGruposModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.V1.Grupos.Models.ListarUsuarioModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.Models.EnderecoModelValidation.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.V1.Pessoas.Models.TelefoneModelValidation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.Models.TelefoneModelValidation.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.Models.TelefoneModelValidation.ValidarTipo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.Models.TelefoneModelValidation.ValidarDDD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.Models.TelefoneModelValidation.ValidarNumero">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.V1.Pessoas.PessoasController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.#ctor(Hcqn.Core.Notifications.Abstractions.INotifications)">
+            <summary>
+            
+            </summary>
+            <param name="notifications"></param>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.Get(Hcqn.Domain.AggregatesModel.PessoaAggregate.IPessoaRepository,System.Int32,System.Int32)">
+            <summary>
+            Lista as pessoas cadastradas
+            Roles: [pessoas-listar,pessoas-editar]
+            </summary>
+            <param name="pessoaRepository"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.Get(Hcqn.Domain.AggregatesModel.PessoaAggregate.IPessoaRepository,System.Guid)">
+            <summary>
+            Detalha uma Pessoa.
+            Roles: [pessoas-listar,pessoas-editar,pessoas-detalhar]
+            </summary>
+            <param name="pessoaRepository"></param>
+            <param name="idPessoa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.Post(Hcqn.Core.Bus.Abstractions.IMediatorHandler,Hcqn.Api.V1.Pessoas.Models.AdicionarPessoaModel)">
+            <summary>
+            
+            </summary>
+            <param name="bus"></param>
+            <param name="adicionarPessoaModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.GetEscolaridade">
+            <summary>
+            Lista os Tipos de Escolaridades. 
+            Roles: [pessoas-editar, pessoas-adicionar]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.GetTipoPessoa">
+            <summary>
+            Lista os Tipos de Pessoas. 
+            Roles: [pessoas-editar, pessoas-adicionar]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.GetTipoTelefone">
+            <summary>
+            Lista os Tipos de Telefones. 
+            Roles: [pessoas-editar, pessoas-adicionar]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.GetTipoEnderecos">
+            <summary>
+            Lista os Tipos de Endereços. 
+            Roles: [pessoas-editar, pessoas-adicionar]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Pessoas.PessoasController.GetTiposDocumentos(System.Int32)">
+            <summary>
+            Lista tipos de documentos a partir do id tipo pessoa
+            Roles : [pessoas-adicionar,pessoas-editar]
+            </summary>
+            <param name="idTipoPessoa"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel.Nome">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel.Login">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel.Senha">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel.ConfirmaSenha">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel.Grupos">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.V1.Usuarios.Models.UsuarioAdicionadoModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.UsuarioAdicionadoModel.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Hcqn.Api.V1.Usuarios.Models.UsuarioAdicionadoModel.Login">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Hcqn.Api.V1.Usuarios.UsuariosController">
+            <summary>
+            Controller de usuários v1
+            </summary>
+        </member>
+        <member name="M:Hcqn.Api.V1.Usuarios.UsuariosController.#ctor(Hcqn.Core.Notifications.Abstractions.INotifications)">
+            <summary>
+            
+            </summary>
+            <param name="notifications"></param>
+        </member>
+        <member name="M:Hcqn.Api.V1.Usuarios.UsuariosController.Get(Hcqn.Domain.AggregatesModel.UserAggregate.IUserRepository,System.Int32,System.Int32)">
+            <summary>
+            Lista os usuários cadastrados.
+            Roles: [usuarios-listar]
+            </summary>
+            <param name="userRepository"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Usuarios.UsuariosController.Get(Hcqn.Domain.AggregatesModel.UserAggregate.IUserRepository,System.Guid)">
+            <summary>
+            Detalha um usuário.
+            Roles: [usuarios-detalhar,usuarios-adicionar]
+            </summary>
+            <param name="userRepository"></param>
+            <param name="idUsuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Usuarios.UsuariosController.Post(Hcqn.Core.Bus.Abstractions.IMediatorHandler,Hcqn.Api.V1.Usuarios.Models.AdicionarUsuarioModel)">
+            <summary>
+            Adiciona um novo usuário.
+            Roles: [usuarios-adicionar]
+            </summary>  
+            <param name="bus"></param>
+            <param name="novoUsuarioModel"></param>
+            <returns>Id do Usuário Criado <see cref="T:Hcqn.Api.V1.Usuarios.Models.UsuarioAdicionadoModel"/></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Usuarios.UsuariosController.Put(Hcqn.Core.Bus.Abstractions.IMediatorHandler,System.Guid,Hcqn.Api.V1.Usuarios.Models.EditarUsuarioModel)">
+            <summary>
+            Edita um Usuário.
+            Roles: [usuarios-editar]
+            </summary>
+            <param name="bus"></param>
+            <param name="idUsuario"></param>
+            <param name="editarUsuarioModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hcqn.Api.V1.Usuarios.UsuariosController.PutPassword(Hcqn.Core.Bus.Abstractions.IMediatorHandler,System.Guid,Hcqn.Api.V1.Usuarios.Models.AlterarSenhaModel)">
+            <summary>
+            Altera a senha de um usuário.
+            Roles: [usuarios-editar]
+            </summary>
+            <param name="bus"></param>
+            <param name="idUsuario"></param>
+            <param name="alterarSenha"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

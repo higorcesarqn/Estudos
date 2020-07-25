@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Hcqn.Core.Models.Extensions.NetTopologySuite</AssemblyName>
+    <RootNamespace>Hcqn.Core.Models.Extensions.NetTopologySuite</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Models\Core.Models.csproj" />
+  </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Humanizer.Core.pt" Version="2.8.26" />
+  </ItemGroup>
+</Project>
