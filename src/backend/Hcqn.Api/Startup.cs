@@ -64,7 +64,7 @@ namespace Hcqn.Api
         /// <param name="container"></param>
         public void ConfigureContainer(ContainerBuilder container)
         {
-            container.RegisterPostgreSqlDataBase(Configuration.GetConnectionString("SitDbConnection"));
+            container.RegisterPostgreSqlDataBase(Configuration.GetConnectionString("DbConnection"));
             container.RegisterBus();
             container.RegisterNotificatons();
 

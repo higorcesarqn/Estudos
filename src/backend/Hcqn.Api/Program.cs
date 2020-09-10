@@ -39,7 +39,7 @@ namespace Hcqn.Api
 
             try
             {
-                Log.Information("Inicializando a API do SIT3!");
+                Log.Information("Inicializando a API!");
                 var host = CreateHostBuilder(args).Build();
 
                 await DbMigration.EnsureSeedData(host);

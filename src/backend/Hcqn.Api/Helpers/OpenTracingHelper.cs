@@ -15,7 +15,7 @@ namespace Hcqn.Api.Helpers
             // Adds the Jaeger Tracer.
             services.AddSingleton<ITracer>(serviceProvider =>
             {
-                var serviceName = "SIT-3";
+                var serviceName = "SIT";
                 var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
 
                 var configuration = Jaeger.Configuration.FromEnv(loggerFactory);

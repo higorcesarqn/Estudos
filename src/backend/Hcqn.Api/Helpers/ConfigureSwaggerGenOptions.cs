@@ -25,7 +25,7 @@ namespace Hcqn.Api.Helpers
                         // build a swagger endpoint for each discovered API version
                         foreach (var description in provider.ApiVersionDescriptions)
                         {
-                            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", $"SIT 3 - {description.GroupName.ToUpperInvariant()}");
+                            options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", $"API - {description.GroupName.ToUpperInvariant()}");
                         }
                     });
         }
@@ -107,10 +107,10 @@ namespace Hcqn.Api.Helpers
         {
             var info = new OpenApiInfo()
             {
-                Title = "API SIT 3",
+                Title = "API",
                 Version = description.ApiVersion.ToString(),
-                Description = "API do SISTEMA DE INFORMAÇÕES TERRITORIAIS",
-                Contact = new OpenApiContact() { Name = "EGL", Email = "contato@egl.eng.br" }
+                Description = "API",
+                Contact = new OpenApiContact() { Name = "EGL", Email = "higorcesarqn@gmail.com" }
             };
 
             if (description.IsDeprecated)
